@@ -26,7 +26,7 @@ while True:
     maisBarato = min(listaProdutosPreco)
     indexDoMaisBarato = listaProdutosPreco.index(maisBarato)
 
-    continuar = str.upper.strip(input('Deseja continuar? (S/N) '))[0]
+    continuar = str.upper(input('Deseja continuar? (S/N) '))[0]
     if continuar == 'N':
         print(f'O produto mais barato da sua lista é {listaProdutos[indexDoMaisBarato]}') 
         print(f'O total da compra foi: R${totalGasto:.2f} e {maisDeMil} produtos custam mais de R$1000,00.')
