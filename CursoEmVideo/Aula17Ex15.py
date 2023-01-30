@@ -13,3 +13,5 @@ for i in range(5):
     inserirEmOrdem(numeros, indice)
 
 print(f'Lista ordenada: {numeros}')
+
+
