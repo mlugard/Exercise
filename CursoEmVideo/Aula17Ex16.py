@@ -11,7 +11,11 @@ while True:
 
     continuar = str(input('Deseja continuar? [S/N] '))[0]
     if continuar in 'Nn':
+        print(numeros)
         print(f'Foram adicionados {len(numeros)} números.')
         print(f'Lista em ordem decrescente: {sorted(numeros, reverse=True)}')
-        
+        if 5 in numeros:
+            print(f'O número 5 aparece na {numeros.index(5)+1}ª posição da lista.')
+        else:
+            print('Não encontrei o número 5 na lista.')
         break
