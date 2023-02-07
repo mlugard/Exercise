@@ -2,19 +2,17 @@
 
 # 20 - Crie um programa que leia onde o usuário possa digitar sete valores numéricos e cadastre-os em uma única lista que mantenha separados os valores pares e ímpares. No final mostre os valores pares e ímpares em ordem crescente.
 
-numeros = []
-pares = []
-impares = []
+numeros = [[], []]
+valor = 0
 
-for num in range(0, 6):
-    numeros.append(int(input(f'Digite o {num+1}º número: ')))
-    for n in numeros:
-        if n % 2 == 0:
-            pares.append(n[:])
-            pares.sort()
-        else:
-            impares.append(n[:])
-            impares.sort()
+for num in range(0, 7):
+    valor = (int(input(f'Digite o {num+1}º número: ')))
+    if valor % 2 == 0:
+        numeros[0].append(valor)
+        numeros[0].sort()
+    else:
+        numeros[1].append(valor)
+        numeros[1].sort()
 
-print(f'Os valores pares digitados foram: {pares}')
-print(f'Os valores ímpares digitados foram: {impares}')        
+print(f'Valores pares: {numeros[0]}')
+print(f'Valores ímpares: {numeros[1]}')        
