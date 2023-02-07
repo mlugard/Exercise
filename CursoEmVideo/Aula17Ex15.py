@@ -15,3 +15,17 @@ for i in range(5):
 print(f'Lista ordenada: {numeros}')
 
 
+lista = []
+
+for c in range (0, 5):
+    n = int(input('Digite um valor: '))
+    if c == 0 or n > lista[-1]:
+        lista.append(n)
+    else:
+        position = 0
+        while position < len(lista):
+            if n <= lista[position]:
+                lista.insert(position, n)
+                break
+            position += 1
+print(f'Os valores digitados em ordem foram: {lista}')
