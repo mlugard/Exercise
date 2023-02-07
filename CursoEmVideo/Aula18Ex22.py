@@ -1,0 +1,7 @@
+# Exercício
+
+# 22 - Aprimore o desafio anterior, mostrando:
+# A) A soma de todos os valores pares digitados;
+# B) A soma dos valores da terceira coluna;
+# C) O maior valor da segunda linha.
+
