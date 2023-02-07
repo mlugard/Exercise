@@ -2,12 +2,19 @@
 
 
 numeros = []
-contador = 0
 for n in range(0, 5):
     numeros.append(int(input('Digite um número para adicioná-lo à lista: ')))
 
+print(f'Você digitou os valores: {numeros}')
 print(f'O maior número da lista é: {max(numeros)}')
-print(f'E se encontra na posição: {numeros.index(max(numeros))+1}')
+print(f'E se encontra na posição: ', end='')
+for i, n in enumerate(numeros):
+    if n == max(numeros):
+        print(f'{i+1}...', end='')
+print()
 print(f'O menor número da lista é: {min(numeros)}')
-print(f'E se encontra na posição: {numeros.index(min(numeros))+1}')
+print(f'E se encontra na posição: ', end='')
+for i, n in enumerate(numeros):
+    if n == min(numeros):
+        print(f'{i+1}...', end='')
 
