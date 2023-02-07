@@ -17,6 +17,8 @@ if verifica_expressao(expressao):
 else:
   print("A expressão está incorreta.")
 
+# CORREÇÃO DO PROFESSOR:
+
 expression = str(input('Digite a expressão: '))
 pilha = []
 for simb in expression:
