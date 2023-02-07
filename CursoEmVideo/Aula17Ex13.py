@@ -3,10 +3,8 @@
 
 numeros = []
 contador = 0
-while contador <= 4:
-    n = int(input('Digite um número para adicioná-lo à lista: '))
-    numeros.append(n)
-    contador += 1
+for n in range(0, 5):
+    numeros.append(int(input('Digite um número para adicioná-lo à lista: ')))
 
 print(f'O maior número da lista é: {max(numeros)}')
 print(f'E se encontra na posição: {numeros.index(max(numeros))+1}')
