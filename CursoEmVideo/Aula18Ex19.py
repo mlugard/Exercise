@@ -7,26 +7,35 @@
 
 pessoas = []
 dados = []
-
-mais_Pesado = []
-mais_Leve = []
+maior = menor = 0
 
 while True:
-    dados.append(str(input('Digite o nome: ')))
-    dados.append(float(input('Digite o peso dessa pessoa:')))
-    pessoas.append(dados[:])
-    dados.clear
+    dados.append(str(input('Nome: ')))
+    dados.append(float(input('Peso: ')))
 
-    for p in pessoas:
-        if p[1] > pessoas[p]:
-            mais_Pesado.append(pessoas[p])
-        elif p[1] < pessoas[p]:
-            mais_Leve.append(pessoas[p])
-
-    continuar = str(input('Deseja continuar o cadastro? [S/N] '))
+    if len(pessoas) == 0:
+        maior = menor = dados[1]
+    else:
+        if dados[1] > maior:
+            maior = dados[1]
+        if dados[1] < menor:
+            menor = dados[1]
     
+    pessoas.append(dados[:])
+    dados.clear()
+
+    continuar = str(input('Deseja continuar? [S/N]'))
     if continuar in 'Nn':
-        print(f'Foram cadastradas {len(pessoas)+1} pessoas.')
-        print(f'A pessoa mais pesada é: {mais_Pesado[0]} com {mais_Pesado[1]}kg.')
-        print(f'E a mais leve é: {mais_Leve[0]} com {mais_Leve[1]}kg.')
         break
+
+print('-=' * 30)
+print(f'Foram cadastradas {len(pessoas)} pessoas na lista.')
+print(f'O maior peso foi de {maior} kg. Peso de: ', end='')
+for p in pessoas:
+    if p[1] == maior:
+        print(f'[{p[0]}]')
+
+print(f'O menor peso foi de {menor} kg. Peso de: ', end='')
+for p in pessoas:
+    if p[1] == menor:
+        print(f'[{p[0]}]')
