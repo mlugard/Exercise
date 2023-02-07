@@ -14,5 +14,6 @@ for num in range(0, 7):
         numeros[1].append(valor)
         numeros[1].sort()
 
+print('-=' * 30)
 print(f'Valores pares: {numeros[0]}')
 print(f'Valores ímpares: {numeros[1]}')        
